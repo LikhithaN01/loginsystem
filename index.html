@@ -16,13 +16,27 @@
             float:left;
             padding:20px;
         }
+        .btn2{
+        width: 10%;
+        text-align: center;
+        justify-content: center;
+        height: 30px;
+        background-color: rgba(255, 0, 0, 0.701);
+       
+    }
+
+        .center {
+        display: flex;
+        justify-content: end;
+        }
     </style>
 </head>
 
 <body>
     <h1>Welcome to HomePage</h1>
-
-    <button type = "button" class = "btn" onclick = "Logout()"> Logout</button>
+    <div class="center">
+        <button type = "button" class = "btn2" onclick = "Logout()"> Logout</button>
+    </div>
     <div id="id0" class="data-body">
         
     </div>
@@ -38,16 +52,15 @@
             while(i<data.length){
                 var obj = data[i];
                 l += `
-            <div class="card" style="width: 18rem;">
+           
             
-            <div class="card-body">
-                
-             <p class="card-text">${obj.capsule_serial}</p>
-              <p class="card-text">${obj.details}</p>
-              <p class="card-text">${obj.status}</p>
+            <div class=" shadow m-3 p-2">
+               <h1 class="card-text">${obj.capsule_id}</h1> 
+                <p class="card-text">${obj.capsule_serial}</p>
+               <p class="card-text">${obj.details}</p>
+               <p class="card-text">${obj.status}</p>
               <p class="card-text">${obj.original_launch}</p>
               <p class="card-text">${obj.landings}</p>
-            </div>
           </div>`;
                 i++
             }
